@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulação de Dom</title>
+    <script>
+        function claroescuro(){
+        document.body.classList.toggle("corpo");
+        }
+
+        function validar(){
+           let nome = document.querySelector("#nome");
+           let email = document.querySelector("#email")
+           if (nome.value != "" && email.value != "" ){
+            alert("Tudo certo!")
+           }
+           else{
+            alert("Os campos precisam ser preenchidos")
+           }
+        }
+    
+    </script>
+</head>
+<body class="corpo">
+    
+    <form action="" >
+        Nome:  <br>
+        <input type="text" name="nome" id="nome"><br><br>
+        Email: <br>
+        <input type="email" name="email" id="email"><br><br>
+    </form>
+
+   <span><button onclick="claroescuro()">Alterar tema</button></span> <span><button onclick="validar()">Enviar</button></span>
+</body>
+</html>
